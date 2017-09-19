@@ -24,7 +24,13 @@ form = """
         </style>
     </head>
     <body>
-		<!-- create your form here -->
+		<form action="/" method="post">
+	        <label for="rot">Rotate by:</label>
+	        <input type="text" name="rot" value="0" />
+	        <textarea name="text"></textarea>
+	        <br>
+	        <input type="submit" value="Submit Query" />
+	    </form>
     </body>
 </html>
 """
