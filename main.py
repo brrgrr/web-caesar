@@ -55,11 +55,12 @@ form = """
 """
 
 
-@app.route("/", methods=['POST'])
+@app.route("/")
 def index():
     content = page_header + form + page_footer
     return content
 
+@app.route("/", methods=['POST'])
 def encrypt():
     rot = int(request.form['rot'])
     text = str(request.form['text'])
