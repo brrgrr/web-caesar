@@ -60,5 +60,5 @@ def index():
     content = page_header + form + page_footer
     return content
 
-
-app.run()
+if __name__ == '__main__':
+    app.run()
