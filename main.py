@@ -4,6 +4,9 @@ app = Flask(__name__)
 app.config['DEBUG'] = True
 
 styles = """
+body {
+    background-color: #F0DC82;
+}
 form {
     background-color: #eee;
     padding: 20px;
