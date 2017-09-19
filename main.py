@@ -55,10 +55,17 @@ form = """
 """
 
 
-@app.route("/")
+@app.route("/", methods=['POST'])
 def index():
     content = page_header + form + page_footer
     return content
+
+def encrypt():
+    rot = int(request.form['rot'])
+    text = str(request.form['text'])
+    encrypted = rotate_string(text,rot)
+    return "<h1>" + encrypted + "</h1>"
+
 
 if __name__ == '__main__':
     app.run()
